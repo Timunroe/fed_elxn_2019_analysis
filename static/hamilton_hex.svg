@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 700 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1.31145,0,0,1.31145,-159.743,-74.5447)">
+        <g transform="matrix(0.281772,0,0,0.281772,128.046,152.356)">
+            <path d="M723,314L543,625.769L183,625.769L3,314L183,2.231L543,2.231L723,314Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:4px;"/>
+        </g>
+        <g transform="matrix(0.281772,0,0,0.281772,285.122,61.9033)">
+            <path d="M723,314L543,625.769L183,625.769L3,314L183,2.231L543,2.231L723,314Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:4px;"/>
+        </g>
+        <g transform="matrix(0.281772,0,0,0.281772,285.122,243.204)">
+            <path d="M723,314L543,625.769L183,625.769L3,314L183,2.231L543,2.231L723,314Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:4px;"/>
+        </g>
+        <g transform="matrix(0.281772,0,0,0.281772,443.894,152.356)">
+            <path d="M723,314L543,625.769L183,625.769L3,314L183,2.231L543,2.231L723,314Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:4px;"/>
+        </g>
+        <g transform="matrix(0.281772,0,0,0.281772,128.046,333.325)">
+            <path d="M723,314L543,625.769L183,625.769L3,314L183,2.231L543,2.231L723,314Z" style="fill:white;fill-rule:nonzero;stroke:black;stroke-width:4px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1.31145,0,0,1.31145,-128.063,-45.2326)">
+        <text x="345.529px" y="135.918px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:22.875px;">HC</text>
+    </g>
+    <g transform="matrix(1.31145,0,0,1.31145,-129.765,188.971)">
+        <text x="345.529px" y="135.918px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:22.875px;">HM</text>
+    </g>
+    <g transform="matrix(1.31145,0,0,1.31145,60.5456,73.9504)">
+        <text x="345.529px" y="135.918px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:22.875px;">HESC</text>
+    </g>
+    <g transform="matrix(1.31145,0,0,1.31145,-357.245,81.3009)">
+        <text x="345.529px" y="135.918px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:22.875px;">HW<tspan x="382.791px 398.049px " y="135.918px 135.918px ">AD</tspan></text>
+    </g>
+    <g transform="matrix(1.31145,0,0,1.31145,-127.086,-29.0726)">
+        <text x="187.918px" y="396.655px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:22.875px;">FG</text>
+    </g>
+</svg>
