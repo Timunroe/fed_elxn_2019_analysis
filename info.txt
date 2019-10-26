@@ -1,0 +1,27 @@
+2019 column names:
+ 'Electoral district number',
+ 'Electoral district name',
+ 'Nom de la circonscription',
+ 'Type of results*',
+ 'Type de résultats**',
+ 'Surname',
+ 'Middle name(s)',
+ 'Given name',
+ 'Political affiliation',
+ 'Appartenance politique',
+ 'Votes obtained',
+ 'Votes obtained %',
+ 'Rejected ballots',
+ 'Total number of ballots cast'
+
+ 2015 column names:
+ 'Province',
+ 'Electoral District Name',
+ 'Electoral District Number',
+ 'Candidate',
+ 'Candidate Residence',
+ 'Candidate Occupation',
+ 'Votes Obtained',
+ 'Percentage of Votes Obtained',
+ 'Majority',
+ 'Majority Percentage'

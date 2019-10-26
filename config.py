@@ -1,58 +1,30 @@
 
 var = {
     # if not spaces, hyphens in riding names: Hamilton Eastâ\x80\x94Stoney Creek
-    'api': 'https://thecanadianpress-a.akamaihd.net/graphics/2019/federal-election/data/full_results.json',
-    'party_leaders': [
-        # leading riding, won riding, lost riding
-        {
-            'Name': 'Maxime Bernier',
-            'Party': 'PPC',
-            'Riding': 'Beauce',
-            'Riding_no': 39,
-            'Id': 2,
-            'Result': 'Lost'
-        },
-        {
-            'Name': 'Yves-François Blanchet',
-            'Party': 'BQ',
-            'Riding': 'Beloeil-Chambly',
-            'Riding_no': 43,
-            'Id': 2,
-            'Result': 'Elected'
-        },
-        {
-            'Name': 'Elizabeth May',
-            'Party': 'GRN',
-            'Riding': 'Saanich—Gulf Islands',
-            'Riding_no': 320,
-            'Id': 3,
-            'Result': 'Elected'
-        },
-        {
-            'Name': 'Andrew Scheer',
-            'Party': 'CON',
-            'Riding': 'Regina—Qu\'Appelle',
-            'Riding_no': 253,
-            'Id': 6,
-            'Result': 'Elected'
-        },
-        {
-            'Name': 'Jagmeet Singh',
-            'Party': 'NDP',
-            'Riding': 'Burnaby South',
-            'Riding_no': 296,
-            'Id': 5,
-            'Result': 'Elected'
-        },
-        {
-            'Name': 'Justin Trudeau',
-            'Party': 'LIB',
-            'Riding': 'Papineau',
-            'Riding_no': 87,
-            'Id': 9,
-            'Result': 'Elected'
-        },
+    'key_parties': [
+        'CON', 'GRN', 'LIB', 'NDP', 'PPC'
     ],
+    'canada': {
+        'CON': 34.4,
+        'GRN': 6.5,
+        'LIB': 33.1,
+        'NDP': 15.9,
+        'PPC': 1.6,
+    },
+    'ontario': {
+        'CON': 33.2,
+        'GRN': 6.2,
+        'LIB': 41.5,
+        'NDP': 16.8,
+        'PPC': 1.6,
+    },
+    'party_icons': {
+        'CON': 'https://projects.thestar.com/election-dashboard/prov/icons/con.png',
+        'GRN': 'https://projects.thestar.com/election-dashboard/prov/icons/grn.png',
+        'LIB': 'https://projects.thestar.com/election-dashboard/prov/icons/lib.png',
+        'NDP': 'https://projects.thestar.com/election-dashboard/prov/icons/ndp.png',
+        'PPC': 'https://projects.thestar.com/election-dashboard/prov/icons/ppc.png',
+    },
     'party_colors': {
         'CON': '#003f73',
         'GRN': '#2e7528',
@@ -62,114 +34,59 @@ var = {
         'Others': '#ccc',
         'BQ': '#093c71',
     },
-    'sites': {
-        'spectator': {
-            'tabs': [
-                (1, 'Hamilton', 'default'),
-                (2, 'Halton', ''),
-                (3, 'Grimsby-Brant', '')
-            ],
-            'template': 'options_all',
+    'regions': [
+        {
+            'name': 'city of hamilton',
             'ridings': [
-                [
-                    'Hamilton Centre',
-                    'Hamilton Mountain',
-                    'Hamilton East-Stoney Creek',
-                    'Hamilton West-Ancaster-Dundas',
-                    'Flamborough-Glanbrook'
-                ],
-                [
-                    'Burlington',
-                    'Oakville North-Burlington',
-                    'Oakville',
-                    'Milton'
-                ],
-                [
-                    'Niagara West',
-                    'Haldimand-Norfolk',
-                    'Brantford-Brant',
-                ]
+                'Hamilton Centre',
+                'Hamilton East--Stoney Creek',
+                'Hamilton Mountain',
+                'Hamilton West--Ancaster--Dundas',
+                'Flamborough--Glanbrook'
             ],
+            'party_abbrev': 'CHP (Christian Heritage Party), CON (Conservative Party of Canada), GRN (Green Party of Canada), IND (Independent), LIB (Liberal Party of Canada), NDP (New Democratic Party), RHINO (Parti Rhinocéros Party)' 
         },
-        'record': {
-            'tabs': [
-                (1, 'Waterloo Region', 'default'),
-                (2, 'Guelph-Perth-Oxford', ''),
-            ],
-            'template': 'options_parties_ridings',
+        {
+            'name': 'halton region',
             'ridings': [
-                [
-                    'Kitchener-Conestoga',
-                    'Waterloo',
-                    'Kitchener Centre',
-                    'Kitchener South-Hespeler',
-                    'Cambridge',
-                ],
-                [
-                    'Guelph',
-                    'Wellington-Halton Hills',
-                    'Perth-Wellington',
-                    'Oxford'
-                ]
-            ]
-        },
-        'examiner': {
-            'tabs': [
-                (1, 'Peterborough', 'default'),
+                'Burlington',
+                'Milton',
+                'Oakville North--Burlington',
+                'Oakville',
+                'Wellington--Halton Hills'
             ],
-            'template': 'options_parties_ridings',
+            'party_abbrev': 'CHP (Christian Heritage Party), CON (Conservative Party of Canada), GRN (Green Party of Canada), IND (Independent), LIB (Liberal Party of Canada), NDP (New Democratic Party), RHINO (Parti Rhinocéros Party)' 
+        },
+        {
+            'name': 'waterloo region',
             'ridings': [
-                [
-                    'Peterborough-Kawartha',
-                    'Northumberland-Peterborough South',
-                    'Haliburton-Kawartha Lakes-Brock',
-                    'Hastings-Lennox and Addington'
-                ],
+                'Cambridge',
+                'Kitchener Centre',
+                'Kitchener--Conestoga',
+                'Kitchener South--Hespeler',
+                'Waterloo',
             ],
+            'party_abbrev': 'APP (Animal Protection Party), CHP (Christian Heritage Party), CON (Conservative Party of Canada), GRN (Green Party of Canada), IND (Independent), ML (Marxist-Leninist Party of Canada), LIB (Liberal Party of Canada), NDP (New Democratic Party), RHINO (Parti Rhinocéros Party), VCP (Veterans Coalition Party)'
         },
-        'halton': {
-            'tabs': [
-                (1, 'Halton', 'default'),
-            ],
-            'template': 'options_parties_ridings',
+        {
+            'name': 'peterborough area',
             'ridings': [
-                [
-                    'Burlington',
-                    'Oakville North-Burlington',
-                    'Oakville', 'Milton'
-                ],
+                'Peterborough--Kawartha',
+                'Northumberland--Peterborough South',
+                'Haliburton--Kawartha Lakes--Brock',
+                'Hastings--Lennox and Addington'
             ],
+            'party_abbrev': 'CHP (Christian Heritage Party), CON (Conservative Party of Canada), GRN (Green Party of Canada), IND (Independent), LIB (Liberal Party of Canada), NDP (New Democratic Party), RHINO (Parti Rhinocéros Party)' 
         },
-        'niagara': {
-            'tabs': [
-                (1, 'Niagara Region', 'default'),
-            ],
-            'template': 'options_parties_ridings',
+        {
+            'name': 'niagara region',
             'ridings': [
-                [
-                    'Niagara West',
-                    'St. Catharines',
-                    'Niagara Falls',
-                    'Niagara Centre'
-                ],
+                'Niagara Centre',
+                'Niagara Falls',
+                'Niagara West',
+                'St. Catharines',
             ],
+            'party_abbrev': 'CHP (Christian Heritage Party), CON (Conservative Party of Canada), GRN (Green Party of Canada), IND (Independent), LIB (Liberal Party of Canada), NDP (New Democratic Party), RHINO (Parti Rhinocéros Party)' 
         },
-        'leaders': {
-            'tabs': [
-                (1, 'Leaders', 'default'),
-            ],
-            'template': 'options_ridings',
-            'ridings': [
-                [
-                    'Beauce',
-                    'Beloeil-Chambly',
-                    'Saanich-Gulf Islands',
-                    'Burnaby South',
-                    'Papineau',
-                    "Regina-Qu'Appelle",
-
-                ],
-            ],
-        },
-    }
+    ]
 }

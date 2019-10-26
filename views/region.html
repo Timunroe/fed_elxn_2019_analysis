@@ -1,0 +1,40 @@
+<h2>Party support in {{region['name'].title().replace('Of', 'of')}}</h2>
+<p><small>Combined results of ridings:
+    % names = ', '.join(region['riding_names'])
+    {{!names.replace('--', '&ndash;')}}
+</small></p>
+<p>&nbsp;</p>
+<div style="overflow-x:auto;">
+<table style="width: 100%; padding-top: 8px; padding-bottom: 8px; border-collapse: collapse;">
+    <thead>
+        <tr>
+            % for item in ['', 'Party', 'Votes', '%', 'vs Ontario', 'vs national', 'vs 2015']:
+                % if item == 'Party':
+            <th style="font-size: 12px; text-align: left; font-weight: 600; text-transform: uppercase; padding-top: 8px; padding-bottom: 8px; padding-right: 12px; color: grey; border-bottom: 1px solid #c7c7c7;">
+                % else:
+            <th style="font-size: 12px; text-align: center; font-weight: 600; text-transform: uppercase; padding-top: 8px; padding-bottom: 8px; padding-right: 12px; color: grey; border-bottom: 1px solid #c7c7c7">
+                % end
+                {{item}}
+            </th>
+            % end
+        </tr>
+    </thead>
+    <tbody>
+        % for item in region['votes_by_party']:
+        <tr>
+            <td style="padding-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #c7c7c7;"><img style="width: 22px;" src="{{icons[item['party']]}}"></td>
+            <td style="text-align: left; padding-top: 8px; padding-bottom: 8px; padding-right: 12px; border-bottom: 1px solid #c7c7c7;">{{item['party']}}</td>
+            <td style="text-align: center; padding-top: 8px; padding-bottom: 8px; padding-right: 12px; border-bottom: 1px solid #c7c7c7;">{{f'''{item['votes_2019']:,}'''}}</td>
+            <td style="text-align: center; font-weight: 700; padding-top: 8px; padding-bottom: 8px; padding-right: 12px; border-bottom: 1px solid #c7c7c7;">{{item['pct_2019']}}</td>
+            <td style="text-align: center; padding-top: 8px; padding-bottom: 8px; padding-right: 12px; border-bottom: 1px solid #c7c7c7;">{{f'''{(item['pct_prov_diff']):+}'''}}</td>
+            <td style="text-align: center; padding-top: 8px; padding-bottom: 8px; padding-right: 12px; border-bottom: 1px solid #c7c7c7;">{{f'''{(item['pct_national_diff']):+}'''}}</td>
+            <td style="text-align: center; padding-top: 8px; padding-bottom: 8px; padding-right: 12px; border-bottom: 1px solid #c7c7c7;">{{f'''{(item['pct_diff']):+}'''}}</td>
+        </tr>
+        % end
+    </tbody>
+</table>
+</div>
+<p><small>Validated results from <a href="https://www.elections.ca/home.aspx">Elections Canada</a> as of Oct. 25, 2019.</small></p>
+<p>&nbsp;</p>
+<h3>Riding results</h3>
+% include('ridings.html', data=region['ridings_results'], party_abbrev=region['party_abbrev'])
